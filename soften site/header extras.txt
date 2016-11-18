@@ -1,0 +1,15 @@
+=======
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">  
+        <li class="<#if page == "home">active</#if>"><a href="${baseUrl}/home">Home</a></li>
+        <li class="<#if page == "order">active</#if>"><a href="${baseUrl}/order">Order online</a></li>
+        <li class="<#if page == "contact">active</#if>"><a href="${baseUrl}/contact">Contact</a></li>
+        <li class="<#if page == "admin">active</#if>"><a href="${baseUrl}/admin">Admin</a></li>
+        <li class="<#if page == "adminEdit">active</#if>"><a href="adminEdit">AdminEdit</a></li>
+        <li class="<#if page == "adminCreate">active</#if>"><a href="${baseUrl}/adminCreate">adminCreate</a></li>
+        <li class="<#if page == "adminAddStock">active</#if>"><a href="${baseUrl}/adminAddStock">adminAddStock</a></li>
+        <li class="<#if page == "adminDeleteUpdate">active</#if>"><a href="${baseUrl}/adminDeleteUpdate">Admin Delete Update</a></li>
+        <li class="<#if page == "ShowPizza">active</#if>"><a href="ShowPizza">Show Pizza</a></li>
+    </ul>
+</div>
+>>>>>>> 650f51f7c39b280f52a287e4a97daffac7cce3cb

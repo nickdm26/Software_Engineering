@@ -1,0 +1,24 @@
+#about {padding-top:50px;height:auto;color: #fff; background-color: #2D1B08;}
+#contact {padding-top:50px;height:height;color: #fff; background-color: #B18D67;}
+#section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+
+.bg-inverse {
+    background-color: #373a3c;
+}
+ body {
+      position: relative;
+}
+
+img{
+	width:	100%;
+}
+.empty{
+	padding-top: 50px;
+}
+
+#centerTextBottomPad{font-size: 20px;padding-bottom: 40px;}
+#aboutContainer{padding-left: 30px;padding-right: 30px;}
+#sectionTitles{width:10%;height: auto;}
+
+
+

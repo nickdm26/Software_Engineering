@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+        <hibernate-mapping package="nz.ac.op.soften2016.bean">
+
+            <class name="Topping" table="topping">
+                <id name="id">
+                    <column name="id" not-null="true"/>
+                    <generator class="native" />
+                </id>
+
+                <property name="name">
+                    <column name="name" />
+                </property> 
+                
+                <property name="quantity">
+                    <column name="quantity" />
+                </property>
+
+                <property name="description">
+					<column name="description" />
+                </property>
+
+                <set name="pizzaToppings" order-by="id" inverse="true">
+                    <key column="toppingId"/>
+                    <one-to-many class="PizzaTopping"/>
+                </set>
+            </class>
+        </hibernate-mapping>

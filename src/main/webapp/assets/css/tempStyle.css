@@ -1,0 +1,22 @@
+fieldset
+{
+	border: 1px solid black;
+}
+
+legend
+{
+	color: black;
+}
+
+.mainContent
+{
+	margin: 20px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+table, th, td, tr
+{
+	border: solid black 1px;
+	border-collapse: collapse;
+}

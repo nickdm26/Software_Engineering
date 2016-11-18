@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="nz.ac.op.soften2016.bean">
+
+    <class name="Order" table="orders">
+        <id name="id">
+            <column name="id" not-null="true"/>
+            <generator class="native" />
+        </id>
+
+        <property name="emailAddress">
+            <column name="emailAddress" />
+        </property>
+
+        <property name="dateTime">
+            <column name ="dateTime" />
+        </property>
+
+        <property name="orderStatus">
+            <column name="orderStatus"/>
+        </property>
+
+        <property name="orderCost">
+            <column name="orderCost"/>
+        </property>
+
+        <set name="pizzaOrderSet" cascade="all,delete-orphan" order-by="id" inverse="true">
+            <key column="orderID"/>
+            <one-to-many class="PizzaOrder"/>
+        </set>
+    </class>
+
+</hibernate-mapping>

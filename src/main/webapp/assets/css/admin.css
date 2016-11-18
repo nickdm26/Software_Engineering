@@ -1,0 +1,28 @@
+#centeredContainer {padding-top:50px;height:auto; padding-right: 15px;
+padding-left: 20%;
+padding-right: 20%;
+margin-right: auto;
+margin-left: auto;
+padding-bottom: 15px;
+padding-top: 5%;
+}
+#matchScroll
+{
+	height: 386px;
+}
+
+
+
+.bg-inverse {
+    background-color: #373a3c;
+}
+
+#heightSpacing{
+	padding-bottom: 3px;
+	
+}
+
+
+.pre-scrollable{
+	background-color:#f5f5f5;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+        <hibernate-mapping package="nz.ac.op.soften2016.bean">
+
+            <class name="XOrder" table="xorder">
+                <id name="id">
+                    <column name="id" not-null="true"/>
+                    <generator class="native" />
+                </id> 
+                
+                <many-to-one name="user" column="userId"/>
+                
+                <property name="orderDate">
+                    <column name="orderDate" />
+                </property>
+                
+                <property name="orderComplete">
+                    <column name="orderComplete" />
+                </property>
+                
+                <property name="address">
+                    <column name="address" />
+                </property>
+                
+                <property name="orderCost">
+                    <column name="orderCost" />
+                </property> 
+                
+                <property name="orderStatus">
+                    <column name="orderStatus" />
+                </property>
+                
+                <property name="orderType">
+                    <column name="orderType" />
+                </property>
+                <property name="scannerOrder">
+                    <column name="scannerOrder" />
+                </property>
+
+                <set name="thePizzaOrders" cascade="all,delete-orphan" order-by="id" inverse="true">
+                    <key column="orderId"/>
+                    <one-to-many class="PizzaOrder"/>
+                </set> 
+                
+            </class>
+
+        </hibernate-mapping>
