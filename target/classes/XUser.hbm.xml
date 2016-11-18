@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+        <hibernate-mapping package="nz.ac.op.soften2016.bean">
+
+            <class name="XUser" table="xuser">
+                <id name="id">
+                    <column name="id" not-null="true"/>
+                    <generator class="native" />
+                </id>
+
+                <property name="firstName">
+                    <column name="firstName" />
+                </property>
+                
+                <property name="lastName">
+                    <column name="lastName" />
+                </property>
+                
+                <property name="email">
+                    <column name="email" />
+                </property>
+                
+                <set name="theOrders" cascade="all,delete-orphan" order-by="id" inverse="true">
+                    <key column="userId"/>
+                    <one-to-many class="XOrder" />
+                </set>
+            </class>
+
+        </hibernate-mapping>
